@@ -1,6 +1,6 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     background-color: #ffffff;
@@ -44,4 +44,55 @@ body {
 
 .controls button:hover {
     background-color: #535353;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-label {
+    max-height: 48px;
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+body {
+    padding: 20px;
+}
+.success-message {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+
+.btn {
+    max-height: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    
+}
+
+#in-prog-small {
+    background: url(assets/in-prog-small.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#done-small {
+    background: url(assets/done-small.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#delete {
+    background: url(assets/delet);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
