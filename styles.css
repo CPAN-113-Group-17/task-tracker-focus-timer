@@ -3,25 +3,32 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #282c34;
+    background-color: #ffffff;
     color: white;
     font-family: Arial, sans-serif;
 }
 
 .timer-container {
     text-align: center;
+    background-color: #E26565;
+    width: 947px;
+    height: 459px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
-.progress-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 8px solid white;
-    display: flex;
-    justify-content: center;
+/*placeholder for now*/
+.mode { 
+    height: 100px;
+    width: 200px;
+}
+
+#time-display {
     align-items: center;
-    font-size: 2em;
+    font-size: 200px;
     font-weight: bold;
+    color: #ffffff;
 }
 
 .controls button {
@@ -30,11 +37,11 @@ body {
     font-size: 1em;
     border: none;
     cursor: pointer;
-    background-color: #61dafb;
-    color: black;
+    background-color: #2C2C2C;
+    color: #F5F5F5;
     border-radius: 5px;
 }
 
 .controls button:hover {
-    background-color: #21a1f1;
+    background-color: #535353;
 }
