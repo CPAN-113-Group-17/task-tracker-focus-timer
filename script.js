@@ -1,22 +1,46 @@
-document.getElementById("userForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    document.querySelector(".success-message").style.display = "block";
-    this.reset();
-});
+let timer;
+let timeLeft = 1500; // 25 minutes in seconds
+let running = false;
+const display = document.getElementById("time-display");
+const startBtn = document.getElementById("start");
+const pauseBtn = document.getElementById("pause");
+const resetBtn = document.getElementById("reset");
 
-function addTask() {
-    let taskInput = document.getElementById("taskInput");
-    let taskValue = taskInput.value.trim();
-    if (taskValue !== "") {
-        let taskList = document.getElementById("taskList");
-        let li = document.createElement("li");
-        li.className = "list-group-item d-flex justify-content-between align-items-center";
-        li.innerHTML = `${taskValue} <button class='btn btn-danger btn-sm' onclick='removeTask(this)'>Delete</button>`;
-        taskList.appendChild(li);
-        taskInput.value = "";
+function updateDisplay() {
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+    display.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+}
+
+function startTimer() {
+    if (!running) {
+        running = true;
+        timer = setInterval(() => {
+            if (timeLeft > 0) {
+                timeLeft--;
+                updateDisplay();
+            } else {
+                clearInterval(timer);
+                running = false;
+            }
+        }, 1000);
     }
 }
 
-function removeTask(button) {
-    button.parentElement.remove();
+function pauseTimer() {
+    clearInterval(timer);
+    running = false;
 }
+
+function resetTimer() {
+    clearInterval(timer);
+    timeLeft = 1500;
+    updateDisplay();
+    running = false;
+}
+
+startBtn.addEventListener("click", startTimer);
+pauseBtn.addEventListener("click", pauseTimer);
+resetBtn.addEventListener("click", resetTimer);
+
+updateDisplay();
