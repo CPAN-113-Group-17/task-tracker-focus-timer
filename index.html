@@ -16,14 +16,14 @@
     <div class="timer-container">
       <div class="mode"></div>
       <div class="progress-circle">
-          <span id="time-display">25:00</span>
+        <span id="time-display">25:00</span>
       </div>
       <div class="controls">
-          <button id="start">Start</button>
-          <button id="pause">Pause</button>
-          <button id="reset">Reset</button>
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
       </div>
-  </div>
+    </div>
 
     <div class="container mt-5">
       <div class="input-group mb-3">
@@ -37,18 +37,44 @@
       </div>
       <div class="row">
         <div class="col">
-          <img src="assets/to-do.png" id="to-do" class="task-label">
+          <img src="assets/to-do.png" id="to-do" class="task-label" />
           <ul id="todoList" class="list-group"></ul>
         </div>
         <div class="col">
-          <img src="assets/in-progress.png" id="in-progress" class="task-label">
+          <img
+            src="assets/in-progress.png"
+            id="in-progress"
+            class="task-label"
+          />
           <ul id="inProgressList" class="list-group"></ul>
         </div>
         <div class="col">
-          <img src="assets/done.png" class="task-label">
+          <img src="assets/done.png" class="task-label" />
           <ul id="doneList" class="list-group"></ul>
         </div>
       </div>
+    </div>
+    <hr />
+    <div class="container mt-5">
+      <h3>User Registration</h3>
+      <form id="registerForm">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <p class="success-message" style="display: none; color: green">
+          Registration successful!
+        </p>
+      </form>
     </div>
   </body>
 </html>
