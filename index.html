@@ -1,54 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form & Task Manager</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <div class="timer-container">
-      <div class="mode"></div>
-      <div class="progress-circle">
-          <span id="time-display">25:00</span>
-      </div>
-      <div class="controls">
-          <button id="start">Start</button>
-          <button id="pause">Pause</button>
-          <button id="reset">Reset</button>
-      </div>
-  </div>
-
-    <div class="container mt-5">
-      <div class="input-group mb-3">
-        <input
-          type="text"
-          id="taskInput"
-          class="form-control"
-          placeholder="Enter a task"
-        />
-        <button class="btn btn-success" onclick="addTask()">Add Task</button>
-      </div>
-      <div class="row">
-        <div class="col">
-          <img src="assets/to-do.png" id="to-do" class="task-label">
-          <ul id="todoList" class="list-group"></ul>
-        </div>
-        <div class="col">
-          <img src="assets/in-progress.png" id="in-progress" class="task-label">
-          <ul id="inProgressList" class="list-group"></ul>
-        </div>
-        <div class="col">
-          <img src="assets/done.png" class="task-label">
-          <ul id="doneList" class="list-group"></ul>
-        </div>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Register</h2>
+        <form id="registration-form">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" id="register-btn">Register</button>
+        </form>
+        <p id="error-message" class="error-message"></p>
+        <p>Already have an account? <a href="#">Login</a></p>
     </div>
-  </body>
+
+    <script src="scripts.js"></script>
+</body>
 </html>
