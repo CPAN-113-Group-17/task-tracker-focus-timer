@@ -1,47 +1,47 @@
 let timer;
 let timeLeft = 1500; // 25 minutes in seconds
 let running = false;
-const display = document.getElementById("time-display");
-const startBtn = document.getElementById("start");
-const pauseBtn = document.getElementById("pause");
-const resetBtn = document.getElementById("reset");
+const display = document.getElementById('time-display');
+const startBtn = document.getElementById('start');
+const pauseBtn = document.getElementById('pause');
+const resetBtn = document.getElementById('reset');
 
 function updateDisplay() {
-    let minutes = Math.floor(timeLeft / 60);
-    let seconds = timeLeft % 60;
-    display.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  let minutes = Math.floor(timeLeft / 60);
+  let seconds = timeLeft % 60;
+  display.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
 function startTimer() {
-    if (!running) {
-        running = true;
-        timer = setInterval(() => {
-            if (timeLeft > 0) {
-                timeLeft--;
-                updateDisplay();
-            } else {
-                clearInterval(timer);
-                running = false;
-            }
-        }, 1000);
-    }
+  if (!running) {
+    running = true;
+    timer = setInterval(() => {
+      if (timeLeft > 0) {
+        timeLeft--;
+        updateDisplay();
+      } else {
+        clearInterval(timer);
+        running = false;
+      }
+    }, 1000);
+  }
 }
 
 function pauseTimer() {
-    clearInterval(timer);
-    running = false;
+  clearInterval(timer);
+  running = false;
 }
 
 function resetTimer() {
-    clearInterval(timer);
-    timeLeft = 1500;
-    updateDisplay();
-    running = false;
+  clearInterval(timer);
+  timeLeft = 1500;
+  updateDisplay();
+  running = false;
 }
 
-startBtn.addEventListener("click", startTimer);
-pauseBtn.addEventListener("click", pauseTimer);
-resetBtn.addEventListener("click", resetTimer);
+startBtn.addEventListener('click', startTimer);
+pauseBtn.addEventListener('click', pauseTimer);
+resetBtn.addEventListener('click', resetTimer);
 
 updateDisplay();
 document
@@ -147,5 +147,21 @@ function loadTasksFromLocalStorage() {
   tasks.inProgress.forEach((task) => createTaskItem(task, 'inProgressList'));
   tasks.done.forEach((task) => createTaskItem(task, 'doneList'));
 }
+
+document
+  .getElementById('registerForm')
+  .addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const user = { username, email, password };
+    localStorage.setItem('user', JSON.stringify(user));
+
+    document.querySelector('.success-message').style.display = 'block';
+    this.reset();
+  });
 
 loadTasksFromLocalStorage();
