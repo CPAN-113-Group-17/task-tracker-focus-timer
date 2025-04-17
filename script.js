@@ -67,9 +67,9 @@ function addTask() {
   li.innerHTML = `
         <span>${taskValue}</span>
         <div>
-            <button class="btn btn-warning btn-sm me-1" onclick="moveTask(this, 'inProgress')">In Progress</button>
-            <button class="btn btn-success btn-sm me-1" onclick="moveTask(this, 'done')">Done</button>
-            <button class="btn btn-danger btn-sm" onclick="deleteTask(this)">Delete</button>
+            <button class="btn" id="in-prog-small" onclick="moveTask(this, 'inProgress')"> </button>
+            <button class="btn" id="done-small" onclick="moveTask(this, 'done')"> </button>
+            <button class="btn" id="delete" onclick="deleteTask(this)"> </button>
         </div>
     `;
 
@@ -135,9 +135,9 @@ function loadTasksFromLocalStorage() {
     li.innerHTML = `
             <span>${text}</span>
             <div>
-                <button class="btn btn-warning btn-sm me-1" onclick="moveTask(this, 'inProgress')">In Progress</button>
-                <button class="btn btn-success btn-sm me-1" onclick="moveTask(this, 'done')">Done</button>
-                <button class="btn btn-danger btn-sm" onclick="deleteTask(this)">Delete</button>
+                <button class="btn" onclick="moveTask(this, 'inProgress')" id="in-prog-small">In Progress</button>
+                <button class="btn" onclick="moveTask(this, 'done')">Done</button>
+                <button class="btn" onclick="deleteTask(this)">Delete</button>
             </div>
         `;
     document.getElementById(listId).appendChild(li);
