@@ -26,6 +26,7 @@ document.getElementById('login-btn').addEventListener('click', function login() 
       } else {
       document.getElementById('username').value = '';
       document.getElementById('password').value = '';
+      localStorage.setItem("loggedIn", "false")
       console.log("Login failed!"); // For debugging
   }
 });
