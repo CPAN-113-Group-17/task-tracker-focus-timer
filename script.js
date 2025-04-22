@@ -1,3 +1,9 @@
+window.onload = function () {
+  const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+  if (!isLoggedIn) {
+    window.location.href = 'signin.html'; // Redirect to the sign-in page if not logged in
+  }
+};
 
 let timer;
 let timeLeft = 1500; // 25 minutes in seconds
@@ -150,3 +156,4 @@ function loadTasksFromLocalStorage() {
 }
 
 loadTasksFromLocalStorage();
+
