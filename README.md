@@ -40,5 +40,4 @@ To start using Tomatodo:
 
 # 🎥 Presentation
 Check out our project walkthrough and team presentation:  
-<!-- Replace the line above with a link if available:  
-📽️ [![Watch the video](https://img.youtube.com/vi/<VIDEO_ID>/0.jpg)](https://www.youtube.com/watch?v=<VIDEO_ID>) -->
+[![Watch the video](https://img.youtube.com/vi/L3TW4C4Hw2Y/0.jpg)](https://www.youtube.com/watch?v=L3TW4C4Hw2Y)
