@@ -40,4 +40,4 @@ To start using Tomatodo:
 
 # 🎥 Presentation
 Check out our project walkthrough and team presentation:  
-[![Watch the video](https://img.youtube.com/vi/L3TW4C4Hw2Y/0.jpg)](https://www.youtube.com/watch?v=L3TW4C4Hw2Y)
+[![Watch the video](https://img.youtube.com/vi/E9mq3S3iw_M/0.jpg)](https://www.youtube.com/watch?v=E9mq3S3iw_M)
