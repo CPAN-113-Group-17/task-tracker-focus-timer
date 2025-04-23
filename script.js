@@ -1,3 +1,4 @@
+
 let timer;
 let timeLeft = 1500; // 25 minutes in seconds
 let running = false;

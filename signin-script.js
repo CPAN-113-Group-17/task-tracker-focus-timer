@@ -1,30 +1,31 @@
-document.getElementById('signin-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting
+document.getElementById('login-btn').addEventListener('click', function login() {
 
-    const email = document.getElementById('email').value;
+    const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('signin-error-message');
+    const storedUser = JSON.parse(localStorage.getItem('user')) || null;
 
     // Clear previous error message
     errorMessage.textContent = '';
 
     // Validate inputs
-    if (email === '' || password === '') {
+    if (username === '' || password === '') {
         errorMessage.textContent = 'Both fields are required.';
         return;
     }
 
-    if (!validateEmail(email)) {
-        errorMessage.textContent = 'Please enter a valid email address.';
-        return;
-    }
-
-    // Simulate a successful sign-in (you can replace this with actual sign-in logic)
-    alert('Sign In successful!');
-    document.getElementById('signin-form').reset();
+    // Check if user exists in localStorage
+    if (
+        storedUser &&
+        username === storedUser.username &&
+        password === storedUser.password
+      ) {
+        localStorage.setItem("loggedIn", "true"); // Flag for later auth check
+        window.location.href = "index.html"; // Redirect to the main page
+        console.log("Login successful!"); // For debugging
+      } else {
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+      console.log("Login failed!"); // For debugging
+  }
 });
-
-function validateEmail(email) {
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return regex.test(email);
-}

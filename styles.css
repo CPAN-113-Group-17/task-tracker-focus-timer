@@ -1,105 +1,105 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    background-color: #ffffff;
-    color: white;
-    font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
 .timer-container {
-    text-align: center;
-    background-color: #E26565;
-    width: 947px;
-    height: 459px;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
+  text-align: center;
+  background-color: #E26565;
+  width: 947px;
+  height: 459px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 /*placeholder for now*/
 .mode { 
-    height: 100px;
-    width: 200px;
+  height: 100px;
+  width: 200px;
 }
 
 #time-display {
-    align-items: center;
-    font-size: 200px;
-    font-weight: bold;
-    color: #ffffff;
+  align-items: center;
+  font-size: 200px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .controls button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    cursor: pointer;
-    background-color: #2C2C2C;
-    color: #F5F5F5;
-    border-radius: 5px;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  background-color: #2C2C2C;
+  color: #F5F5F5;
+  border-radius: 5px;
 }
 
 .controls button:hover {
-    background-color: #535353;
+  background-color: #535353;
 }
 
 .col {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .task-label {
-    max-height: 48px;
-    max-width: fit-content;
-    margin: 0 auto;
-    margin-bottom: 10px;
+  max-height: 48px;
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 body {
-    padding: 20px;
+  padding: 20px;
 }
 .success-message {
-    display: none;
-    color: green;
-    margin-top: 10px;
+  display: none;
+  color: green;
+  margin-top: 10px;
 }
 
 .btn {
-    max-height: 32px;
-    min-height: 32px;
-    max-width: 32px;
-    min-width: 32px;
-    border-radius: 50%;
-    
+  max-height: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  
 }
 
 #in-prog-small {
-    background: url(assets/in-prog-small.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+  background: url(assets/in-prog-small.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 #done-small {
-    background: url(assets/done-small.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+  background: url(assets/done-small.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 #delete {
-    background: url(assets/delete.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+  background: url(assets/delete.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .task-btn {
-    border-radius: 0px 10px 10px;
-    color: white;
-    background-color: #b8b8b8;
-    border: none;
+  border-radius: 0px 10px 10px;
+  color: white;
+  background-color: #b8b8b8;
+  border: none;
 }
