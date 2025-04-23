@@ -1,3 +1,19 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+  if (!isLoggedIn) {
+    window.location.href = 'signin.html';
+    return;
+  }
+
+  const logoutBtn = document.getElementById('logout-btn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', function logout() {
+      console.log("Logging out..."); // For debugging
+      localStorage.setItem('loggedIn', 'false'); // Clear the logged-in flag 
+      window.location.replace('signin.html'); // Redirect to the sign-in page
+    });
+  }
+});
 
 let timer;
 let timeLeft = 1500; // 25 minutes in seconds
@@ -143,10 +159,4 @@ function loadTasksFromLocalStorage() {
         `;
     document.getElementById(listId).appendChild(li);
   };
-
-  tasks.todo.forEach((task) => createTaskItem(task, 'todoList'));
-  tasks.inProgress.forEach((task) => createTaskItem(task, 'inProgressList'));
-  tasks.done.forEach((task) => createTaskItem(task, 'doneList'));
-}
-
-loadTasksFromLocalStorage();
+};
